@@ -15,7 +15,7 @@ tile sizes being possible, but it still poses a threat. In addition, of course, 
 become extremely corrupted over time.
 
 This approach of quantized matmul is ideal for edge devices, where milliseconds might not matter so much in favor of saving on size and manufacturing cost, but might not be the best for
-high performance computing and the like.
+high performance computing and the like. Some of the timing issues could also likely be solved by taking advtange of tensor cores instead of CUDA cores.
 
 This was also repository to learn about CUDA programming through developing a few basic kernels (like increasingly optimized matrix multiplication and 2D image blurring, most commented out
 in src/tiled_matmul.cu)

@@ -16,7 +16,7 @@ void print_gpu_memory_info() {
     std::cout << "Used GPU Memory: " << total_mem - free_mem << "\n\n";
 }
 
-#define TILE_WIDTH 2
+#define TILE_WIDTH 32
 
 __global__
 void quantized_mult_kernel(int8_t* mat1, int8_t* mat2, float* res, int i, int j, int k, size_t tile_width, float scale_mat1, float scale_mat2) {
